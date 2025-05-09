@@ -1,0 +1,9 @@
+<h2>Lista de Produtos</h2>
+<ul>
+{% for produto in produtos %}
+    <li>{{ produto.nome }} - {{ produto.preco }} - {{ produto.categoria }}</li>
+{% empty %}
+    <li>Nenhum produto cadastrado.</li>  <!-- mudança para exigir mensagem se não tiver nenhum produto cadastrado -->
+{% endfor %}
+</ul>
+
